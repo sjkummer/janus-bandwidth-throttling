@@ -91,7 +91,7 @@ echo "SUCCESS libwebsockets"
 
 # Install Janus
 sudo rm -rfd janus-gateway || ignore_error
-git clone https://github.com/meetecho/janus-gateway.git \
+git clone $JANUS_REPO \
 && cd janus-gateway \
 && git fetch \
 && git checkout $JANUS_BRANCH \

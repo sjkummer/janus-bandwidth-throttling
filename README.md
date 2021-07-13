@@ -19,9 +19,9 @@ docker build --build-arg JANUS_BRANCH=<YOUR-GIT-TAG-OF-CHOICE> -t janus-network-
 ```
 
 ## Run
-Start the container as follows. The `UPLOAD_LIMIT` and `DOWNLOAD_LIMIT`parameters can have any value you like.
+Start the container as follows. The `DOWNLOAD_LIMIT` and `UPLOAD_LIMIT` parameters can have any value you like.
 ```
-docker run --env UPLOAD_LIMIT=1024 --env DOWNLOAD_LIMIT=4096 --rm --cap-add=NET_ADMIN -dp 8000:8000 -dp 8088:8088 --expose=20000-40000 janus-network-limiting
+docker run --env DOWNLOAD_LIMIT=8192 --env UPLOAD_LIMIT=4096  --rm --cap-add=NET_ADMIN -dp 8000:8000 -dp 8088:8088 --expose=20000-40000 janus-network-limiting
 ```
 
 After that, navigate to http://localhost:8000/ and test any Janus Demo you'd like.

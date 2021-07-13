@@ -1,9 +1,10 @@
 FROM ubuntu:20.10
 
-ENV DOWNLOAD_LIMIT=4096
+ENV DOWNLOAD_LIMIT=8192
 ENV UPLOAD_LIMIT=4096
 
 ARG JANUS_BRANCH=master
+ARG JANUS_REPO=https://github.com/meetecho/janus-gateway.git
 
 WORKDIR /app
 
